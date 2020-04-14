@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_search"
         android:name="com.example.myapplication15.ui.search.SearchFragment"
 
         tools:layout="@layout/activity_search_tab" />

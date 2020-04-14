@@ -16,15 +16,15 @@ import com.example.myapplication15.R;
 
 public class SearchFragment extends Fragment {
 
-    private SearchViewModel dashboardViewModel;
+    private SearchViewModel SearchViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        dashboardViewModel =
+        SearchViewModel =
                 ViewModelProviders.of(this).get(SearchViewModel.class);
         View root = inflater.inflate(R.layout.activity_search_tab, container, false);
-        final TextView textView = root.findViewById(R.id.text_menu);
-        dashboardViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        final TextView textView = root.findViewById(R.id.section_label);
+        SearchViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
